@@ -1,0 +1,231 @@
+
+.movies-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: var(--movies-text-color);
+  }
+  
+  .movies-tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--movies-divider-color);
+    overflow-x: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  .movies-tabs::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .movies-tab {
+    background: none;
+    border: none;
+    color: var(--movies-text-secondary);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    position: relative;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+  
+  .movies-tab:hover {
+    color: var(--movies-text-color);
+  }
+  
+  .movies-tab.active {
+    color: var(--movies-text-color);
+  }
+  
+  .movies-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--movies-accent-color);
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .movies-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .movies-section {
+      padding: 1rem 0.5rem;
+    }
+    
+    .movies-tab {
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movies-tabs {
+      margin-bottom: 1.5rem;
+    }
+    
+    .movies-tab {
+      font-size: 0.8rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+
+
+
+
+
+
+.movie-theme {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 50px;
+}
+
+.film-reel-loader {
+  margin-bottom: 1.5rem;
+}
+
+.spinning {
+  font-size: 3rem;
+  color: var(--movies-accent-color);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-bar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--movies-accent-color);
+  border-radius: 2px;
+  position: relative;
+  margin-top: 1rem;
+  max-width: 300px;
+}
+
+.profile-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.title-icon {
+  color: var(--movies-accent-color);
+  font-size: 2.5rem;
+}
+
+
+
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-message h3 {
+  color: var(--movies-accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.error-message p {
+  color: var(--movies-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.retry-button {
+  background-color: var(--movies-accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: var(--movies-accent-hover);
+  transform: translateY(-2px);
+}
+
+.profile-card {
+  margin: 2rem auto;
+  background-color: var(--movies-primary-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 800px;
+}
+
+.spotlight-effect {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  opacity: 0.7;
+  animation: spotlight 8s infinite alternate;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0.2;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+    transform: translate(500px, 200px);
+  }
+}

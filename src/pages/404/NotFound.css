@@ -1,0 +1,54 @@
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .not-found-content {
+    max-width: 600px;
+  }
+  
+  .not-found-content h1 {
+    font-size: 8rem;
+    margin: 0;
+    background: linear-gradient(90deg, var(--accent-primary), var(--highlight));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  
+  .not-found-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .not-found-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+  
+  .not-found-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .not-found-content h1 {
+      font-size: 6rem;
+    }
+  
+    .not-found-content h2 {
+      font-size: 2rem;
+    }
+  
+    .not-found-actions {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+  

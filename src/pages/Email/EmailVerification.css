@@ -1,0 +1,116 @@
+.verification-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Adjust based on your header/footer size */
+    padding: 20px;
+    background-color: #141414;
+  }
+  
+  .verification-card {
+    max-width: 500px;
+    width: 100%;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .verification-content {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .verification-title {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .verification-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #e50914;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+  }
+  
+  .verification-logo span {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .verification-message {
+    color: #e5e5e5;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .verification-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .verification-button:hover {
+    background-color: #f40612;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(229, 9, 20, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #e50914;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .verification-success {
+    background-color: rgba(39, 174, 96, 0.15);
+    border: 1px solid #27ae60;
+    color: #2ecc71;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .success-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .verification-error {
+    background-color: rgba(231, 76, 60, 0.15);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .retry-button {
+    margin-top: 15px;
+  }
