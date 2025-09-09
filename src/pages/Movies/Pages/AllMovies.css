@@ -573,13 +573,17 @@
   .movies-grid-container {
     position: relative;
     padding: 0 2rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
   }
   
   .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1rem;
-    
+    width: 100%;
+    margin: 0 auto;
    
   }
   
@@ -790,11 +794,12 @@
 
   @media (max-width: 360px) {
   .movies-grid-container {
-    padding: 0 0.25rem 1rem;
+padding: 0 0 1rem;
   }
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 0.25rem;
+    margin: 0 auto;
   }
 }
   
