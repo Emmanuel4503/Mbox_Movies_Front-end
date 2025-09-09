@@ -579,6 +579,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1rem;
+    
+   
   }
   
   .movie-grid-item {
@@ -785,6 +787,16 @@
       var(--movies-border-color) 24px
     );
   }
+
+  @media (max-width: 360px) {
+  .movies-grid-container {
+    padding: 0 0.25rem 1rem;
+  }
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.25rem;
+  }
+}
   
  .search-loading-overlay {
   position: fixed;
@@ -987,7 +999,12 @@
   
     .movies-grid-container {
       padding: 0 0.5rem 1rem;
+      
     }
+    .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
   
     .movie-grid-item {
       min-width: 130px;
